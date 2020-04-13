@@ -37,7 +37,7 @@
 
 Добавить к компоненту тесты.
 
-* ["Tooltip" (behavior) компонент](https://glitch.com/edit/#!/tooltip-learn-javascrip)
+* ["Tooltip" (behavior) компонент](https://glitch.com/edit/#!/tooltip-learn-javascript)
 
 Пояснение к заданию:
 
