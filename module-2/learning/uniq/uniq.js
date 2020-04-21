@@ -2,9 +2,6 @@
 аргумент - массив примитивных значений и возвращает новый 
 массив уникальных значений */
 
-console.log(uniq([1, 2, 2, 3, 1, 4])); // [1, 2, 3, 4]
-console.log(uniq(['a', 'a', 'b', 'c', 'c'])); // ['a', 'b', 'c']
-
-function uniq(arr) {
+export function uniq(arr) {
   return [...new Set(arr)]; 
 }

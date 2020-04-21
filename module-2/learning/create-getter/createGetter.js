@@ -3,23 +3,25 @@
 Возвращать "createGetter" должен функция к-я по заданному пути будет искать значение в переданном ей объекте.  
 */
 
-function createGetter(field) {
+export function createGetter(field) {
   const fields = field.split('.');
 
   return (obj) => {
     let objectStore = obj;
     for (let i = 0; i < fields.length; i++) {
-      objectStore = objectStore[fields[i]];
+      if (objectStore != undefined) {
+        objectStore = objectStore[fields[i]];
+      }
     }
     return objectStore;
   }
 }
 
-const product = {
-  category: {
-    title: "Goods"
-  }
-}
+// const product = {
+//   category: {
+//     title: "Goods"
+//   }
+// }
 
-const getter = createGetter('category.title');
-console.error(getter(product)); // Goods 
+// const getter = createGetter('category.title');
+// console.error(getter(product)); // Goods 

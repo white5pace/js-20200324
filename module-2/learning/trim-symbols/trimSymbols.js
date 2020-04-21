@@ -4,16 +4,11 @@
 
 Функция должна вернуть строку символов, удалив из нее все последовательные одинаковые символы к-е превышают заданное число. */ 
 
-console.log(trimSymbols('xxx', 3));
-console.log(trimSymbols('xxx', 2));
-console.log(trimSymbols('xxx', 1));
+export function trimSymbols(symbols, maxRepeat) {
+  if (!symbols.length) return '';
+  if (maxRepeat === 0) return '';
+  if (maxRepeat === undefined) return symbols;
 
-
-console.log(trimSymbols('xxxaaaaab', 3));
-console.log(trimSymbols('xxxaaaaa', 2));
-
-
-function trimSymbols(symbols, maxRepeat) {
   let currentCounter = 1;
   let trimedSymbols = `${symbols[0]}`;
 
