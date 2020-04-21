@@ -14,27 +14,24 @@ console.log(trimSymbols('xxxaaaaa', 2));
 
 
 function trimSymbols(symbols, maxRepeat) {
-  let symbolsInArray = symbols.trim('');
   let currentCounter = 1;
-  let trimedSymbols = [symbols[0]];
+  let trimedSymbols = `${symbols[0]}`;
 
-  for (let i = 1; i < symbolsInArray.length; i++) {
-    let previousSymbol = symbolsInArray[i - 1]
-    let currentSymbol = symbolsInArray[i];
+  for (let i = 1; i < symbols.length; i++) {
+    let previousSymbol = symbols[i - 1]
+    let currentSymbol = symbols[i];
 
     if (previousSymbol === currentSymbol) {
-      if (currentCounter >= maxRepeat) { // maxRepeat = 1
-        continue;                         
-      }else { 
-        trimedSymbols.push(currentSymbol);
-        currentCounter++;
+      if (currentCounter < maxRepeat) { 
+        trimedSymbols += currentSymbol;
+        currentCounter++;                      
       }
     } else {
       currentCounter = 1;
-      trimedSymbols.push(currentSymbol);
+      trimedSymbols += currentSymbol;
     }
 
   }
-  return trimedSymbols.join('');
+  return trimedSymbols
 
 } 
