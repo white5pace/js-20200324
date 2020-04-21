@@ -1,0 +1,15 @@
+hjkl arrows navigation
+wbe words move
+nubmer of smth with number
+% step in or out of bracket
+0 and $ begin end of the line
+g and G begin and end of file
+^ G + linenumber
+o insert new line below O above
+x = backspace
+"r" insert with replace
+"d" delete can be combinate with w or e and number
+what deleted in clipboard can be past with "p"
+"." repeat previous 
+"v" visual mode
+"a" it's after last symbol
