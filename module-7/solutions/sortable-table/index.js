@@ -45,9 +45,6 @@ export default class SortableTable {
 
     this.headersConfig = headersConfig;
     this.url = new URL(url, BACKEND_URL);
-
-    console.error(this.url);
-
     this.sorted = sorted;
     this.isSortLocally = isSortLocally;
 
@@ -72,8 +69,6 @@ export default class SortableTable {
   }
 
   async loadData (id, order) {
-    // this.url
-
     this.url.searchParams.set('_sort', id);
     this.url.searchParams.set('_order', order);
     this.url.searchParams.set('_start', 0);
